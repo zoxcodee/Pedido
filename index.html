@@ -422,27 +422,14 @@
         /* =====================================================
            CONFIGURAÇÃO — mexa só aqui
            ===================================================== */
-const CONFIG = {
-    nome: "Laura",
-
-    fotos: ["laura.png"], // fotos que ficam caindo
-
-    playlist: [{
-            titulo: "31_12",
-            artista: "Jorge & Mateus",
-            arquivo: "31_12.mp3"
-        },
-        {
-            titulo: "Meu Novo Mundo",
-            artista: "Charlie Brown Jr.",
-            arquivo: "novo_mundo.mp3"
-        },
-        {
-            titulo: "Te esperando",
-            artista: "Luan Santana",
-            arquivo: "te_esperando.mp3"
-        }
-    ]};
+        const CONFIG = {
+            nome: "Laura",
+            fotos: ["laura.png"],             // fotos que ficam caindo
+            playlist: [
+                { titulo: "31.12", artista: "Jorge & Mateus", arquivo: "31.12.mp3" },
+                { titulo: "Meu Novo Mundo", artista: "Charlie Brown Jr.", arquivo: "novo_mundo.mp3" },
+                { titulo: "Te esperando", artista: "Luan Santana", arquivo: "te_esperando.mp3" },
+            ],
             volumeInicial: 0.20,
             imagemUrl: "",                    // (opcional) link público da foto pra aparecer no embed do Discord
             webhook: "https://discord.com/api/webhooks/1528983029190754446/U-k-KVDlQeEqbSs11gq1_Q_fXIRZHnZgNBfLT8TD8j6udDirs6BVl-ftHGxEQtGlJuev"
@@ -574,7 +561,6 @@ const CONFIG = {
                     embeds: [{
                         ...embed,
                         fields: [
-                            { name: "👤 Quem respondeu", value: CONFIG.nome, inline: true },
                             { name: "🕐 Quando", value: `<t:${agora}:F>\n(<t:${agora}:R>)`, inline: true },
                             { name: "🔁 Resposta nº", value: String(tentativas), inline: true },
                             { name: "⏱️ Tempo lendo a carta", value: duracao(Date.now() - abertoEm), inline: true },
